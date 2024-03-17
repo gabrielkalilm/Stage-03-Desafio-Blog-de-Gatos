@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+
+:root {
+  font-size: 62,5%;
+  /* font color*/
+  --font-hue: 240;
+  --font-white: hsl(0, 0%, 100%);
+  --font-black-900: hsl(var(--font-hue), 6%, 13%);
+  --font-black-500: hsl(var(--font-hue), 5%, 7%);
+  
+  /*bg colours*/
+  --bg-hue: 195;
+  --bg-blue-900: hsl(var(--bg-hue), 91%, 25%);
+  --bg-blue-500: hsla(0, 0%, 100%, 0.2);
+  --bg-blue-100: hsl(var(--bg-hue), 100%, 98%);
+  --bg-blue-700: hsl(var(--bg-hue), 46%, 40%);
+}
+
+html, body, root {
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  display: grid;
+  background-color: var(--bg-blue-500);  
+  place-content: center;
+    
+}
+
+header {
+  padding: 1.2rem 2.8rem;
+  background-color: var(--bg-blue-900);
+  height: 7.2rem;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  
+}
+
+header nav label {
+  display: none;
+}
+
+header nav input {
+  background-color: var(--bg-blue-700);
+  padding: 1.2rem 1.6rem;
+  width: 24rem;
+  border: 0;
+  border-radius: .4rem;
+
+  color: var(--font-white);
+  font-family: "Mulish", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+header nav input::placeholder {
+  color: var(--font-white);
+  font-family: "Mulish", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+nav {
+  margin-inline: auto;
+  display: flex;
+  gap: 2.6rem;
+  place-content: center;
+}
+
+#logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+#jojo {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+#cat1 {
+  border: 0;
+  margin-bottom: 3.2px;
+  overflow-x: hidden;
+  margin-inline: auto;
+  width: 100vw;
+  aspect-ratio: 2/1;
+}
+
+main {
+  padding: 0 2.4rem 3.2rem;
+  min-width: 44rem;
+  place-content: center;
+}
+
+.titleButtons {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  margin-bottom: 3.2rem;
+}
+
+main h1 {
+  color: var(--font-black-900);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.icons {
+  display: flex;
+  gap: 1.2rem;
+  border: 0;
+  background: none;
+}
+
+.icons img:hover {
+  cursor: pointer;
+  padding: 1.4rem;
+}
+
+.icons img:active {
+  filter: brightness(110%) grayscale(150%);
+}
+
+
+.icons img {
+  background-color: var(--bg-blue-900);
+  place-content: center;
+  padding: 1.2rem;
+  border-radius: 50%;
+}
+
+main p {
+  color: var(--font-black-500);
+  line-height: 160%;
+  margin-bottom: 3.4rem;
+  max-width: 80rem;
+}
+
+.articles {
+  display: grid;
+  padding: 0 2.4rem 40rem;
+}
+
+.articles h2 {
+  color: var(--font-black-900);
+    
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 160%;
+
+  margin-bottom: 3.2rem;
+}
+
+.article {
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.article a {
+  color: var(--font-black-900);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 160%;
+
+  margin-bottom: 1.3rem;
+
+  text-decoration: none;
+}
+
+.article a:hover {
+  color: var(--bg-blue-700);
+}
+
+.article p {
+  color: var(--font-black-500);
+  font-size: 14px;
+  line-height: 160%;
+  width: 22rem;
+  height: 5.4rem;
+}
+
+.article img {
+  width: 15rem;
+  height: 8rem;
+  aspect-ratio: 21/9;
+  animation-name: crazycat;
+  animation-duration: 1s;
+}
+
+.article img:hover {
+  filter: brightness(110%) hue-rotate(50deg);
+}
+
+@keyframes crazycat{
+  0% {
+
+  } 
+
+  100% {
+    transform: rotateZ(360deg);
+    filter: brightness(110%) hue-rotate(50deg);
+  }
+}
+
+
+
+footer {
+  position: fixed;
+  background-color: var(--bg-blue-700);
+  text-align: center;
+  place-content: center;
+  padding: 1.6rem;
+  
+  bottom: 0;
+  left: 0%;
+  width: 100%;
+  color: var(--font-white);
+  font-weight: 600;
+
+  height: min(6.4rem), max(7.2rem);
+}
+
+
+@media (min-width:1440px) {
+  body {
+    display: grid;
+    grid-template-columns: 90rem 39rem;
+    grid-template-rows: 7.2rem 40rem 18rem 6.4rem;
+    gap: 3.2rem;
+    background-color: var(--bg-blue-100);
+
+    place-content: center;
+    
+  }
+
+  header nav input {
+    
+    width: 108rem;
+  }
+
+  header {
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+
+  #cat1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    max-width: 80rem;
+    margin: 0 0 0 11rem;
+    overflow: hidden;
+  }
+
+  
+
+  main {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 0;
+    margin: 0 0 0 11rem;
+    width: 80rem;
+    height: 44rem;  
+  }
+
+  .titleButtons {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between
+  }
+
+  .articles {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    display: grid;
+    padding: 0 11rem 0 0;
+  }
+
+  footer {
+    grid-row: 4/5;
+    grid-column: 1/3;
+  }
+
+}
